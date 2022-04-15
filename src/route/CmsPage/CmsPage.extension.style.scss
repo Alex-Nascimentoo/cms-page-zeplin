@@ -1,0 +1,233 @@
+$white: #ffffff;
+$ghost-white: #f5f7fb;
+$cobalt-blue: #1e4ca8;
+$space-cadet: #2c2f46;
+$green-blue-crayola: #2682bd;
+$roman-silver: #85878f;
+$green-ryb: #85b73c;
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 1em 0 3em;
+}
+
+li {
+    display: flex;
+    align-items: flex-start;
+
+    p:first-of-type {
+        width: 90%;
+        display: inline-block;
+    }
+}
+
+section + section {
+    margin-block-start: 3rem;
+}
+
+th {
+    background-color: #e4e6e9;
+    border: 1px solid black;
+}
+
+a {
+    text-decoration: underline;
+    color: $green-blue-crayola;
+}
+
+.cms-page {
+    max-width: 1040px;
+    padding: 40px 40px 80px;
+    margin: 0 auto;
+}
+
+.section-title, .section-subtitle {
+    margin-block-end: .7em;
+
+    font-family: OpenSans-light;
+    font-size: 17px;
+    color: $space-cadet;
+}
+
+.section-subtitle {
+    font-family: OpenSans;
+    color: $green-blue-crayola;
+    line-height: 22px;
+}
+
+.section-description {
+    font-family: OpenSans;
+    font-size: 14px;
+    color: $roman-silver;
+    line-height: 26px;
+}
+
+.truck-flex {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.truck-img {
+    width: 220px;
+    height: 220px;
+    margin: 2em auto;
+
+    background-color: steelblue;
+    background-image: url('../../../public/img/porulator-truck.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.local__bullet-list {
+    li::before {
+        color: $roman-silver;
+    }
+
+    p {
+        margin: 0 0 0 10%;
+
+        color: $roman-silver;
+    }
+}
+
+.col {
+    width: 100%;
+    padding: 0 2em;
+}
+
+.info-card {
+    width: 100%;
+    padding: .5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+        min-width: 42px;
+        min-height: 42px;
+        margin: 2rem;
+        padding: 11px 8px;
+        display: inline-block;
+        
+        background-color: $cobalt-blue;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+    }
+
+    .mail {
+        background-image: url('../../../public/img/letter-icon.svg');
+    }
+
+    .trash {
+        background-image: url('../../../public/img/basket-icon.svg');
+    }
+
+    .card-description {
+        margin: 0;
+
+        font-family: OpenSans;
+        font-size: 14px;
+        color: $roman-silver;
+        line-height: 26px;
+    }
+
+    .card-title {
+        display: inline-block;
+        margin-block-end: .3em;
+
+        font-family: OpenSans-Semibold;
+        font-size: 14px;
+        color: $roman-silver;
+    }
+}
+
+.flex {
+    display: flex;
+
+    .info-card {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+.table-phone, .table-normal {
+    display: none;
+    margin-top: 2em;
+    
+    #center {
+        text-align: center;
+        vertical-align: middle;
+    
+        width: 25%;
+        border: 1px solid #e4e6e9;
+    }
+
+    th {
+        color: $space-cadet;
+    }
+
+    td {
+        color: $roman-silver;
+    }
+
+    .checkmark {
+        width: 10px;
+        height: 11px;
+        // margin: 6px 10px 5px 0;
+        margin-right: 10px;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 700px) {
+    .table-phone {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 700px) {
+    .table-normal {
+        display: inline-block;
+    }
+
+    .section-content {
+        display: flex;
+        justify-content: space-between;
+
+        .section-description {
+            width: 67%; // 660px
+        }
+
+        .flex {
+            justify-content: flex-end;
+        }
+    }
+
+    .local__bullet-list p {
+        margin-left: 6%;
+    }
+
+    .half-columns {
+        display: flex;
+        column-gap: 2em;
+    }
+
+    .card-text {
+        // padding: 0 3em;
+        // width: 50%;
+    }
+}
+
+@media (min-width: 950px) {
+    li p {
+        margin-left: 3%;
+    }
+}
